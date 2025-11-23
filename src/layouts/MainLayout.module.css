@@ -1,0 +1,18 @@
+/* 기본 레이아웃 */
+.layout {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 60px;
+}
+
+/* Header와 Footer는 배경 위에 오도록 z-index 설정 */
+header,
+footer {
+  position: relative;
+}
+
+/* Outlet에 해당하는 페이지 콘텐츠는 기본적으로 배경 위에 오도록 */
+main {
+  position: relative;
+}
