@@ -1,20 +1,20 @@
-/* 기본 레이아웃: 가로 1440px 기준 */
+/* 기본 레이아웃: 1440px 가운데 정렬 */
 .layout {
   position: relative;
-  min-height: 100vh;
-
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+
+  padding-top: 156px;
+
+  min-height: calc(100vh - 156px);
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-/* Header와 Footer는 배경 위에 오도록 z-index 설정 */
-header,
-footer {
-  position: relative;
-}
-
-/* Outlet에 해당하는 페이지 콘텐츠는 기본적으로 배경 위에 오도록 */
-main {
-  position: relative;
+/* 컨텐츠 영역 */
+.main {
+  width: 100%;
 }

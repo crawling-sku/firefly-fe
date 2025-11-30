@@ -1,0 +1,114 @@
+.container {
+  width: fit-content;
+  margin: 50px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.leftIconBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.weatherIcon {
+  width: 135px;
+  height: auto;
+}
+
+.periodText {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #8f8f8f;
+}
+
+.alertBox {
+  width: 1168px;
+  height: 160px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 20px;
+  border: 1px solid #eee;
+  background: rgba(249, 249, 249, 0.75);
+
+  box-shadow:
+    1px 1px 10px 0 rgba(217, 217, 217, 0.4),
+    4px 4px 4px 0 #f5f5f5 inset;
+
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin-left: 30px;
+}
+
+.mainText {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.red {
+  color: #ff3737;
+}
+
+.blue {
+  margin-top: 4px;
+  font-size: 20px;
+  color: #1677ff;
+  font-weight: 600;
+}
+
+.trafficLight {
+  display: flex;
+  gap: 12px;
+
+  background: #1a1a1a;
+  border-radius: 11px;
+  padding: 8px 14px;
+}
+
+/* 개별 불 */
+.light {
+  width: 56px;
+  height: 56px;
+  border-radius: 11px;
+  opacity: 0.35;
+}
+
+.red {
+  color: #ff3737;
+}
+
+.yellow {
+  color: #ffe600;
+}
+
+.green {
+  color: #58d848;
+}
+
+.redLight {
+  background: #ff3737;
+}
+
+.yellowLight {
+  background: #ffe600;
+}
+
+.greenLight {
+  background: #58d848;
+}
+
+.active {
+  opacity: 1;
+}
