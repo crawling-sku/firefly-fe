@@ -1,9 +1,11 @@
-/* 기본 레이아웃 */
+/* 기본 레이아웃: 가로 1440px 기준 */
 .layout {
   position: relative;
   min-height: 100vh;
-  min-width: 100vw;
-  padding-top: 60px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Header와 Footer는 배경 위에 오도록 z-index 설정 */
