@@ -1,10 +1,9 @@
-// src/components/SafetyItem.jsx
 import styles from './SafetyItem.module.css';
 
-import cctvImg from '../assets/cctv.png';
-import lightImg from '../assets/light.png';
-import bellImg from '../assets/bell.png';
-import stationImg from '../assets/station.png';
+import cctvImg from '../../assets/cctv.png';
+import lightImg from '../../assets/light.png';
+import bellImg from '../../assets/bell.png';
+import stationImg from '../../assets/station.png';
 
 const SafetyItem = ({ facilityCounts, policeCount }) => {
   const items = [

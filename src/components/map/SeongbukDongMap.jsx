@@ -4,7 +4,7 @@ import { geoMercator, geoCentroid } from 'd3-geo';
 import styles from './SeongbukDongMap.module.css';
 
 import seongbukDongGeo from '../../assets/map/seongbuk_dong.json';
-import TrafficLight from '../TrafficLight';
+import TrafficLight from './TrafficLight';
 import { getSeongbukDistricts } from '../../api/safety';
 
 const normalizeDongName = (name = '') => {

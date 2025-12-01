@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import WeatherAlert from '../components/weather/WeatherAlert';
-import SafetyItem from '../components/SafetyItem';
+import SafetyItem from '../components/safetyItem/SafetyItem';
 import SeongbukDongMap from '../components/map/SeongbukDongMap';
-import CrimeTop5 from '../components/CrimeTop5';
+import CrimeTop5 from '../components/crime/CrimeTop5';
 import { fetchSeongbukWeather } from '../api/weather';
 import { fetchSafetyGrade, fetchPoliceCenters } from '../api/safety';
-import SafetyNews from '../components/SafetyNews';
+import SafetyNews from '../components/news/SafetyNews';
 
 export default function HomePage() {
   const [weather, setWeather] = useState(null);

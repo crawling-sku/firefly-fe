@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getSeongbukCrimeTop5 } from '../api/crime';
+import { getSeongbukCrimeTop5 } from '../../api/crime';
 import styles from './CrimeTop5.module.css';
 
 const CrimeTop5 = () => {

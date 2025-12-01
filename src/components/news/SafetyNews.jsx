@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getSafetyNewsTop3 } from '../api/news';
+import { getSafetyNewsTop3 } from '../../api/news';
 import styles from './SafetyNews.module.css';
-import linkIcon from '../assets/link.png';
+import linkIcon from '../../assets/link.png';
 
 const SafetyNews = ({ region = '성북구' }) => {
   const [newsList, setNewsList] = useState([]);
