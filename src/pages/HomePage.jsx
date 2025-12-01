@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import WeatherAlert from '../components/weather/WeatherAlert';
 import SafetyItem from '../components/SafetyItem';
+import SeongbukDongMap from '../components/map/SeongbukDongMap';
 import { fetchSeongbukWeather } from '../api/weather';
 import { fetchSafetyGrade, fetchPoliceCenters } from '../api/safety';
 
@@ -55,12 +56,9 @@ export default function HomePage() {
         />
       )}
 
-      {safety && police && (
-        <SafetyItem
-          facilityCounts={safety.facilityCounts}
-          policeCount={police.count}   
-        />
-      )}
+      {safety && police && <SafetyItem facilityCounts={safety.facilityCounts} policeCount={police.count} />}
+
+      <SeongbukDongMap />
     </>
   );
 }

@@ -1,0 +1,61 @@
+.wrapper {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.trafficLight {
+  display: flex;
+  gap: 12px;
+  background: #1a1a1a;
+  border-radius: 11px;
+  padding: 8px 14px;
+}
+
+.light {
+  width: 56px;
+  height: 56px;
+  border-radius: 11px;
+  opacity: 1;
+}
+
+.redLight {
+  background: #ff4444;
+}
+
+.yellowLight {
+  background: #fd9800;
+}
+
+.greenLight {
+  background: #58d848;
+}
+
+.labelRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 0;
+}
+
+.label {
+  font-size: 13px;
+  color: #444;
+}

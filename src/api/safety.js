@@ -19,3 +19,5 @@ export const fetchPoliceCenters = async (emdName) => {
     throw e;
   }
 };
+
+export const getSeongbukDistricts = () => API.get('/seongbuk/districts');

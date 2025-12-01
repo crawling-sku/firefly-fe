@@ -1,0 +1,74 @@
+.wrapper {
+  flex-shrink: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-left: 10px;
+}
+
+.title {
+  color: #1a1a1a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+}
+
+.seongbukBadge {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  min-width: 120px;
+  height: 45px;
+
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: #e1f3ff;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d4ed8;
+
+  z-index: 10;
+}
+
+.mapContainer {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 100px 16px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapLabel {
+  font-size: 8px;
+  font-weight: 500;
+  fill: #374151;
+  pointer-events: none;
+}
+
+.trafficWrapper {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+
+  width: 350px;
+  height: 200px;
+  z-index: 10;
+}
