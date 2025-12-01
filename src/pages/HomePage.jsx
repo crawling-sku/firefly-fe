@@ -5,6 +5,7 @@ import SeongbukDongMap from '../components/map/SeongbukDongMap';
 import CrimeTop5 from '../components/CrimeTop5';
 import { fetchSeongbukWeather } from '../api/weather';
 import { fetchSafetyGrade, fetchPoliceCenters } from '../api/safety';
+import SafetyNews from '../components/SafetyNews';
 
 export default function HomePage() {
   const [weather, setWeather] = useState(null);
@@ -62,6 +63,8 @@ export default function HomePage() {
       <SeongbukDongMap />
 
       <CrimeTop5 />
+
+      <SafetyNews />
     </>
   );
 }

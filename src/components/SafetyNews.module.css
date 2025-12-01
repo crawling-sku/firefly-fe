@@ -1,0 +1,111 @@
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+
+.cardList {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  flex: 1 1 0;
+  width: 448px;
+  min-height: 279px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  background-color: #fbfbfb;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 19.2px;
+  color: #5e5e5e;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkIcon {
+  width: 25px;
+}
+
+.cardTitle,
+.summary {
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
+.cardTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0;
+}
+
+.summary {
+  font-size: 22.4px;
+  color: #5e5e5e;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.keywordBadge {
+  align-self: flex-start;
+  margin-top: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.25rem 0.9rem;
+  border-radius: 6.4px;
+  background-color: #e1f3ff;
+  color: #409ee3;
+  text-align: center;
+  font-size: 19px;
+}
+
+.emptyText {
+  font-size: 0.9rem;
+  color: #888888;
+}
