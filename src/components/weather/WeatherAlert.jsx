@@ -16,52 +16,68 @@ import pty7 from '../../assets/weather/pty_7.png';
 const SKY_IMAGES = { 1: sky1, 3: sky3, 4: sky4 };
 const PTY_IMAGES = { 0: pty0, 1: pty1, 2: pty2, 3: pty3, 5: pty5, 6: pty6, 7: pty7 };
 
-// pty가 0이 아니면 강수 아이콘, 아니면 하늘 상태 아이콘
-const getWeatherIcon = (sky, pty) => (pty !== 0 ? PTY_IMAGES[pty] : SKY_IMAGES[sky]);
+// pty가 0이 아니면 강수 아이콘, 0이면 하늘 아이콘
+const getWeatherIcon = (sky, pty) => {
+  if (pty !== 0 && PTY_IMAGES[pty]) return PTY_IMAGES[pty];
+  if (SKY_IMAGES[sky]) return SKY_IMAGES[sky];
+  return SKY_IMAGES[3]; // fallback: 구름많음
+};
 
 const WeatherAlert = ({
-  sky = 3,
-  pty = 0,
-  emdName = '정릉동',
-  grade = '위험',
-  period = '오후',
-  skyDesc = '구름많음',
-  ptyDesc = '강수없음',
-  time = '2200', // "2200" 형식
+  sky,
+  pty,
+  emdName,
+  grade,
+  period,
+  skyDesc,
+  ptyDesc,
+  time,
+  nowTime, // 원하면 화면에 보여줄 수도 있음
 }) => {
-  const icon = getWeatherIcon(sky, pty);
+  // ------- 안전한 기본 처리 (임시값이 아니라 "없을 때만" 최소 보정) -------
+  const skyCode = Number(sky ?? 3);
+  const ptyCode = Number(pty ?? 0);
+  const safeEmdName = emdName ?? '';
+  const safePeriod = period ?? '';
+  const safeSkyDesc = skyDesc ?? '';
+  const safePtyDesc = ptyDesc ?? '';
+  const safeTime = time ?? '0000';
+  const currentGrade = grade ?? '안전';
 
-  // 상단 작은 텍스트: "오후 · 구름많음" 또는 "오후 · 비"
-  const statusText = `${period} · ${pty !== 0 ? ptyDesc : skyDesc}`;
+  const icon = getWeatherIcon(skyCode, ptyCode);
 
-  // "2200" → 22 → 10, "오후 10시" 이런 식으로 표시
-  const rawHour = parseInt(String(time).slice(0, 2), 10);
+  // 상단 "오후 · 구름많음" 이런 텍스트
+  const statusText = `${safePeriod} · ${ptyCode !== 0 ? safePtyDesc : safeSkyDesc}`;
+
+  // "2200" → "오후 10시"
+  const rawHour = parseInt(String(safeTime).slice(0, 2), 10);
   const displayHour = rawHour > 12 ? rawHour - 12 : rawHour || 0;
-  const timeLabel = `${period} ${displayHour}시`;
+  const timeLabel = `${safePeriod} ${displayHour}시`;
 
-  const gradeKey = grade === '위험' ? 'danger' : grade === '주의' ? 'warning' : 'safe';
+  // 위험도 텍스트/색상
+  const gradeKey = currentGrade === '위험' ? 'danger' : currentGrade === '주의' ? 'warning' : 'safe';
+
   const gradeText =
-    grade === '위험'
+    currentGrade === '위험'
       ? '평소보다 위험한 편입니다'
-      : grade === '주의'
+      : currentGrade === '주의'
         ? '평소보다 주의가 필요합니다'
         : '평소보다 안전합니다';
 
-  const gradeColorClass = grade === '위험' ? styles.red : grade === '주의' ? styles.yellow : styles.green;
+  const gradeColorClass = currentGrade === '위험' ? styles.red : currentGrade === '주의' ? styles.yellow : styles.green;
 
   return (
     <div className={styles.container}>
-      {/* 왼쪽 아이콘 + "오후 · 구름많음" */}
       <div className={styles.leftIconBlock}>
         <img src={icon} alt='날씨 아이콘' className={styles.weatherIcon} />
         <div className={styles.periodText}>{statusText}</div>
+        {nowTime && <div className={styles.nowTime}>기준 시각: {nowTime}</div>}
       </div>
 
-      {/* 오른쪽 박스 (문구 + 신호등) */}
       <div className={styles.alertBox}>
         <div className={styles.textArea}>
           <p className={styles.mainText}>
-            오늘 {timeLabel}에는 성북구 {emdName} 일대의 예상 위험도가{' '}
+            오늘 {timeLabel}에는 성북구 {safeEmdName} 일대의 예상 위험도가{' '}
             <span className={gradeColorClass}>{gradeText}</span>
           </p>
           <p className={styles.blue}>안심 귀갓길을 이용해보세요!</p>

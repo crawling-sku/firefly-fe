@@ -1,9 +1,9 @@
 .container {
   width: fit-content;
-  margin: 50px auto 0;
+  margin: 50px 0 0;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
 }
 
 .leftIconBlock {
@@ -16,10 +16,12 @@
 .weatherIcon {
   width: 135px;
   height: auto;
+  margin-left: 55px;
 }
 
 .periodText {
   margin-top: 4px;
+  margin-left: 55px;
   font-size: 14px;
   color: #8f8f8f;
 }
