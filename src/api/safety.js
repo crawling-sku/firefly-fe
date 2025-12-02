@@ -21,3 +21,7 @@ export const fetchPoliceCenters = async (emdName) => {
 };
 
 export const getSeongbukDistricts = () => API.get('/seongbuk/districts');
+
+export const getSeongbukFacilities = () => API.get('/seongbuk/facilities');
+
+export const getSeongbukDistrictDetail = (emdName) => API.get(`/seongbuk/district/${encodeURIComponent(emdName)}`);
