@@ -12,7 +12,7 @@ const SafetyItem = ({ facilityCounts, policeCount }) => {
       label: 'CCTV',
       value: facilityCounts?.['CCTV'] ?? 0,
       unit: '개',
-      subText: '반경 500m 기준',
+      subText: '반경 3km 기준',
       color: '#1A1A1A',
     },
     {
@@ -20,7 +20,7 @@ const SafetyItem = ({ facilityCounts, policeCount }) => {
       label: '보안등',
       value: facilityCounts?.['보안등'] ?? 0,
       unit: '개',
-      subText: '반경 500m 기준',
+      subText: '반경 3km 기준',
       color: '#F59E0B',
     },
     {
@@ -36,7 +36,7 @@ const SafetyItem = ({ facilityCounts, policeCount }) => {
       label: '비상벨',
       value: facilityCounts?.['안심벨'] ?? 0,
       unit: '개',
-      subText: '반경 500m 기준',
+      subText: '반경 3km 기준',
       color: '#EF4444',
     },
   ];
