@@ -1,0 +1,161 @@
+.wrapper {
+  margin-top: 1rem;
+}
+
+.form {
+  border-radius: 12px;
+  border: 1px solid #d6e9f8;
+  background: #ffffff;
+  padding: 1.5rem 1.8rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 18px;
+  color: #5e5e5e;
+  margin-bottom: 5px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+.icon {
+  width: 15px;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  color: #333;
+}
+
+.input::placeholder {
+  color: #b4b4b4;
+}
+
+.priorityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priorityLabel {
+  font-size: 18px;
+  color: #5e5e5e;
+  margin-top: 10px;
+}
+
+.priorityMode {
+  font-size: 18px;
+  color: #409ee3;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: -0.3rem;
+}
+
+.sliderSideLabel {
+  font-size: 14px;
+  color: #8f8f8f;
+}
+
+.slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #e5e5e5;
+  outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #e5e5e5;
+}
+
+.slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #e5e5e5;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #409ee3;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #409ee3;
+  cursor: pointer;
+}
+
+.searchBtn {
+  margin-top: 0.6rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #409ee3;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.searchBtn:focus,
+.searchBtn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.mapArea {
+  margin-top: 1rem;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  overflow: hidden;
+}

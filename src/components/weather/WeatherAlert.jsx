@@ -1,4 +1,3 @@
-// src/components/weather/WeatherAlert.jsx
 import styles from './WeatherAlert.module.css';
 
 import sky1 from '../../assets/weather/sky_1.png';
@@ -16,25 +15,13 @@ import pty7 from '../../assets/weather/pty_7.png';
 const SKY_IMAGES = { 1: sky1, 3: sky3, 4: sky4 };
 const PTY_IMAGES = { 0: pty0, 1: pty1, 2: pty2, 3: pty3, 5: pty5, 6: pty6, 7: pty7 };
 
-// pty가 0이 아니면 강수 아이콘, 0이면 하늘 아이콘
 const getWeatherIcon = (sky, pty) => {
   if (pty !== 0 && PTY_IMAGES[pty]) return PTY_IMAGES[pty];
   if (SKY_IMAGES[sky]) return SKY_IMAGES[sky];
-  return SKY_IMAGES[3]; // fallback: 구름많음
+  return SKY_IMAGES[3];
 };
 
-const WeatherAlert = ({
-  sky,
-  pty,
-  emdName,
-  grade,
-  period,
-  skyDesc,
-  ptyDesc,
-  time,
-  nowTime, // 원하면 화면에 보여줄 수도 있음
-}) => {
-  // ------- 안전한 기본 처리 (임시값이 아니라 "없을 때만" 최소 보정) -------
+const WeatherAlert = ({ sky, pty, emdName, grade, period, skyDesc, ptyDesc, time, nowTime }) => {
   const skyCode = Number(sky ?? 3);
   const ptyCode = Number(pty ?? 0);
   const safeEmdName = emdName ?? '';
@@ -46,15 +33,12 @@ const WeatherAlert = ({
 
   const icon = getWeatherIcon(skyCode, ptyCode);
 
-  // 상단 "오후 · 구름많음" 이런 텍스트
   const statusText = `${safePeriod} · ${ptyCode !== 0 ? safePtyDesc : safeSkyDesc}`;
 
-  // "2200" → "오후 10시"
   const rawHour = parseInt(String(safeTime).slice(0, 2), 10);
   const displayHour = rawHour > 12 ? rawHour - 12 : rawHour || 0;
   const timeLabel = `${safePeriod} ${displayHour}시`;
 
-  // 위험도 텍스트/색상
   const gradeKey = currentGrade === '위험' ? 'danger' : currentGrade === '주의' ? 'warning' : 'safe';
 
   const gradeText =

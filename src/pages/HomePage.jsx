@@ -6,6 +6,7 @@ import CrimeTop5 from '../components/crime/CrimeTop5';
 import { fetchSeongbukWeather } from '../api/weather';
 import { fetchSafetyGrade, fetchPoliceCenters } from '../api/safety';
 import SafetyNews from '../components/news/SafetyNews';
+import SafePathSection from '../components/safePath/SafePathSection';
 
 export default function HomePage() {
   const [weather, setWeather] = useState(null);
@@ -61,6 +62,8 @@ export default function HomePage() {
       {safety && police && <SafetyItem facilityCounts={safety.facilityCounts} policeCount={police.count} />}
 
       <SeongbukDongMap />
+
+      <SafePathSection />
 
       <CrimeTop5 />
 
