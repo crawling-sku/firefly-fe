@@ -1,21 +1,20 @@
-# 🎯 Branch Convention & Git Convention
+<img width="7680" height="4320" alt="1" src="https://github.com/user-attachments/assets/a314bdc0-6d29-4a48-89c6-df2640baea67" />
+<img width="7680" height="4320" alt="2" src="https://github.com/user-attachments/assets/eb093c0b-ab7f-4323-9472-8d349b4f0b10" />
+<img width="7680" height="4320" alt="3" src="https://github.com/user-attachments/assets/b51ad6d2-a89e-489a-8bba-f2d4a2f38baa" />
+<img width="7680" height="4320" alt="4" src="https://github.com/user-attachments/assets/eb0d82fc-048c-46de-9ff9-ee9e24bf0d80" />
+<img width="7680" height="4320" alt="5" src="https://github.com/user-attachments/assets/4fc3bf4c-4ea4-4c39-938f-ba915f2bbf02" />
+<img width="7680" height="4320" alt="6" src="https://github.com/user-attachments/assets/d4c3da9b-bb71-458c-abe2-18b651789e55" />
+<img width="7680" height="4320" alt="7" src="https://github.com/user-attachments/assets/11651854-53c8-4147-bae3-c98e49ea95e9" />
+<img width="7680" height="4320" alt="8" src="https://github.com/user-attachments/assets/323643dc-2d8c-4dde-b861-4bdb357bdd50" />
+<img width="7680" height="4320" alt="9" src="https://github.com/user-attachments/assets/4d5d1d97-9050-4f37-9bbe-c17151935766" />
+<img width="7680" height="4320" alt="10" src="https://github.com/user-attachments/assets/5cbda377-0aba-443a-900a-a1e5a9ecb74f" />
+<img width="7680" height="4320" alt="11" src="https://github.com/user-attachments/assets/89bc5592-eb06-4b3e-a84c-addfb935438f" />
+<img width="5760" height="3240" alt="13" src="https://github.com/user-attachments/assets/692cc986-3d0c-4492-9be8-6d2733a17959" />
+<img width="7680" height="4320" alt="14" src="https://github.com/user-attachments/assets/709ff36a-e5e3-4423-8c31-7098331c5e66" />
+<img width="5760" height="3240" alt="15" src="https://github.com/user-attachments/assets/ea4151b9-7f51-4bb8-9aed-2d46e5d86afd" />
+<img width="7680" height="4320" alt="16" src="https://github.com/user-attachments/assets/81c38692-28c8-4471-a491-d34b00d8955e" />
 
-## 🎯 Git Convention
-
-- 🎉 **Start:** Start New Project [:tada]
-- ✨ **Feat:** 새로운 기능을 추가 [:sparkles]
-- 🐛 **Fix:** 버그 수정 [:bug]
-- 🎨 **Design:** CSS 등 사용자 UI 디자인 변경 [:art]
-- ♻️ **Refactor:** 코드 리팩토링 [:recycle]
-- 🔧 **Settings:** Changing configuration files [:wrench]
-- 🗃️ **Comment:** 필요한 주석 추가 및 변경 [:card_file_box]
-- ➕ **Dependency/Plugin:** Add a dependency/plugin [:heavy_plus_sign]
-- 📝 **Docs:** 문서 수정 [:memo]
-- 🔀 **Merge:** Merge branches [:twisted_rightwards_arrows:]
-- 🚀 **Deploy:** Deploying stuff [:rocket]
-- 🚚 **Rename:** 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 [:truck]
-- 🔥 **Remove:** 파일을 삭제하는 작업만 수행한 경우 [:fire]
-- ⏪️ **Revert:** 전 버전으로 롤백 [:rewind]
+<br>
 
 ## 🪴 Branch Convention (GitHub Flow)
 
